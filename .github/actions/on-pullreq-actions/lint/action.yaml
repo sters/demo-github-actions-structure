@@ -1,0 +1,8 @@
+name: lint
+description: lint
+runs:
+  using: composite
+  steps:
+    - name: lint
+      shell: sh
+      run: echo "lint"
