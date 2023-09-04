@@ -1,17 +1,11 @@
-# shared definitions
-base-job: &base-job
-  runs-on: ubuntu-latest
-  timeout-minutes: 5
-
-
-# jobs definitions
 name: do something
 on: [pull_request]
 permissions:
   contents: read
 jobs:
-  lint:
-    <<: *base-job
+  lint: &base-job
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
     steps:
       - uses: ./.github/actions/on-pullreq-actions/lint
   test:
