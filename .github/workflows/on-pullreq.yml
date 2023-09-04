@@ -10,11 +10,11 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      - run: sleep 20
+      - run: sleep 1
       - uses: ./.github/actions/on-pullreq-actions/lint
   test:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      - run: sleep 20
+      - run: sleep 1
       - uses: ./.github/actions/on-pullreq-actions/test
